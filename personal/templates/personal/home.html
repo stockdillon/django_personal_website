@@ -5,5 +5,24 @@
 <p>Hello, and welcome to my website!</p>
 <p>My name is Dillon, and I enjoy programming, reading, and staying fit!</p>
 
+<p id="edit">Click me to edit!</p>
+
+<script>
+    var pTagToEdit = document.getElementById('edit');
+
+    /*
+    for (var i = 0; i < pTagsToEdit.length; i++) {
+        pTagsToEdit[i].addEventListener('click', updateName);
+    }
+    */    
+
+    pTagToEdit.addEventListener('click', updateName);
+
+    function updateName() {
+        var text = prompt('Enter your text');
+        pTagToEdit.textContent = 'Your text: ' + text;
+    }
+</script>
+
 {% include "personal/includes/htmlsnippet.html" %}
 {% endblock %}
