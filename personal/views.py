@@ -2,9 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from wsgiref.util import FileWrapper
 import os
+from django.views.generic import TemplateView
 
-def index(request):
-    return render(request, 'personal/home.html')
+#def index(request):
+#    return render(request, 'personal/home.html')
 
 def downloads(request):
     return render(request, 'personal/downloads.html')
@@ -22,3 +23,8 @@ def download_resume(request):
     response['Content-Length'] = os.path.getsize(filename)
     response['Content-Disposition'] = 'attachment; filename=%s' % 'Dillon_Stock_Resume_2018.pdf'
     return response
+
+class index(TemplateView):
+    template_name = "personal/home.html"
+    def get(self, request):
+        return render(request, self.template_name)

@@ -13,5 +13,12 @@ class index(TemplateView):
     def get(self, request):
         #return HttpResponse("<h2>Please upload an image!</h2>")
         form = ImageUploadForm()
-        print("-------------------------------------------------------------------------------------------")
         return render(request, self.template_name, {'form': form})
+
+    def post(self, request):
+        print("success")
+        form = ImageUploadForm(request.POST)
+        if form.is_valid():
+            text = form.cleaned_data['post']
+        args = {'form': form, 'text': text}
+        return render(request, self.template_name, context=args)
