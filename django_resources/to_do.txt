@@ -1,0 +1,13 @@
+TO DO:
+
+Django:
+Set up a file upload form that accepts an image (.jpg, .png, etc.)
+Places the file in an AWS S3 bucket
+Sends a REQUEST to API Gateway that specifies the filename
+
+Lambda Function:
+Set up API gateway endpoint to accept parameters (filename)
+Build a deployment package that has cv2 and numpy installed
+Create a wrapper for the image (cv2.imread("https://aws.s3/bucket_name/file_name"))
+Detect a bounding box for a face
+Post the bounding box as a list to Django API

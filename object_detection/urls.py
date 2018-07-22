@@ -7,5 +7,4 @@ from object_detection.views import index
 urlpatterns = [
     #url('^$', views.index, name='index'),
     path('', index.as_view(), name='index'),
-    path('admin/', admin.site.urls),
 ]

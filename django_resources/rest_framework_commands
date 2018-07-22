@@ -1,0 +1,54 @@
+---START NEW PROJECT---
+django-admin startproject <my_website_name>
+
+---CREATE NEW APPLICATION---
+cd <my_website_name>
+python manage.py startapp <my_app_name>
+	*IMPORTANT: Do not forget to add this application to the INSTALLED_APPS 
+	section of the 'settings.py' file in the top level directory!*
+
+
+---MANAGEMENT COMMANDS---
+python manage.py startapp webapp
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+
+
+---RUNNING TESTS---
+python manage.py test
+
+
+---CREATE VIEW FOR WEBAPP HOMEPAGE---
+cd <my_app_name>
+append the following to views.py:
+	def index(request):
+		return HttpResponse("<h2>Hello World!</h2>")
+
+
+---ADD URLS.PY TO WEBAPP---
+Inside <my_app_name> directory, make a new file 'urls.py':
+	from django.conf.urls import url
+	from . import views
+	urlpatterns = [
+		path('', views.index.as_view(), name='index')
+	]
+
+---MIGRATING MODELS---
+After adding a new class (that extends models.Model) to a models.py file,
+run the two management commands:
+python manage.py makemigrations <app name>
+python manage.py migrate
+
+---REGISTERING MODELS---
+To manage models via the Django Admin Portal after migration...
+add the following lines to the admin.py file in the application where the model exists:
+from .models import <Model name>
+admin.site.register(<Model name>)
+
+
+
+---FORM CREATION---
+Always use ModelForm when creating a Form.
+This will create a form which is 'bound' to a model.

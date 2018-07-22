@@ -1,0 +1,12 @@
+../../opencv_ffmpeg342.dll,sha256=whs1Y-60merB7qAueyHXiZ8aAITKoLETCeqAfxhfkjs,17124352
+../site-packages/cv2.cp36-win32.pyd,sha256=CYnFIgAafWNL0CCFwkyuDyBnTfM-hWUcPnfZXVdPzms,38840320
+../site-packages/opencv.LICENSE,sha256=in8VvHR9KJNx4KllBuHArJTzUppTiHtrqvUKeflxtZY,1097
+../site-packages/opencv.LICENSE-3RD-PARTY,sha256=ASOHdb1kCQfSVwEl-7F3POQjZOEYXmm9eLTEHI55XrU,29170
+../site-packages/opencv_ffmpeg342.dll,sha256=whs1Y-60merB7qAueyHXiZ8aAITKoLETCeqAfxhfkjs,17124352
+cv.py,sha256=rJzKdY0oc1yHy8N5K6U5qoztqwjWCAo8E5PnatDiEkc,21
+opencv_python-3.4.2.dist-info/METADATA,sha256=8Ox0sGOyO_OVwqQmpJtnusKgYpROznnrEUghyelXcVA,307
+opencv_python-3.4.2.dist-info/RECORD,,
+opencv_python-3.4.2.dist-info/WHEEL,sha256=eT4ZiUnwGsVIrXCid4NF4UV4D8QSSvclVbYKANjxOAk,102
+opencv_python-3.4.2.dist-info/top_level.txt,sha256=ByWeW2ZQIqV03v86_OuoQSRX_1WkPP4CmMVefLzw8b4,3
+opencv_python-3.4.2.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+__pycache__/cv.cpython-36.pyc,,

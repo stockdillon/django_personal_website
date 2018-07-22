@@ -1,0 +1,11 @@
+ {% block content %}
+
+<div class="container">
+    <h1>Object Detection Result</h1>
+    <h2> {{ text }}</h2>
+    {% for result in results %}
+        <img src="{{ result.image.url }}" alt="">
+    {% endfor %}
+</div>
+
+{% endblock %}

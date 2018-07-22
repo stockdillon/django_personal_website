@@ -2,12 +2,13 @@
 
 <div class="container">
     <h1>Object Detection</h1>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Submit</button>
     </form>
     <h2>{{ text }}</h2>
+    {{ results }}
 </div>
 
 {% endblock %}
