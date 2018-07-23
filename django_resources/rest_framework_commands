@@ -50,5 +50,13 @@ admin.site.register(<Model name>)
 
 
 ---FORM CREATION---
-Always use ModelForm when creating a Form.
+Use ModelForm when creating a Form which represents a model.
 This will create a form which is 'bound' to a model.
+
+
+---HANDLING FILE UPLOADS AND USER MEDIA---
+Add the following two lines to <my_website_name>/<my_website_name>/settings.py:
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'object_detection/media')
+And ALSO add the following line to <my_website_name>/<my_website_name>/urls.py:
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
