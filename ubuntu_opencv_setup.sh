@@ -33,9 +33,11 @@ sudo -H pip3 install -U pip numpy
 
 # BEFORE DOING THIS, A VIRTUALENV SHOULD BE CREATED AND ACTIVATED
 # now install python libraries within this virtual environment
-sudo ~/Environments/django/activate
+source ~/python_virtual_envs/django_py36/bin/activate
 pip install numpy scipy matplotlib scikit-image scikit-learn ipython
 deactivate
+
+cd ~/
 
 git clone https://github.com/opencv/opencv.git
 cd opencv 
@@ -66,7 +68,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 
 # find out number of CPU cores in your machine
 nproc
-# substitute 4 by output of nproc
+# substitute 1 by output of nproc
 make -j1
 sudo make install
 sudo sh -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf'
