@@ -4,27 +4,27 @@ sudo apt-get upgrade
 sudo apt-get remove x264 libx264-dev
 
 # Ubuntu commands for OpenCV dependency installation
-sudo apt-get install build-essential checkinstall cmake pkg-config yasm
-sudo apt-get install git gfortran
-sudo apt-get install libjpeg8-dev libjasper-dev libpng12-dev
+sudo apt-get install --assume-yes build-essential checkinstall cmake pkg-config yasm
+sudo apt-get install -y git gfortran
+sudo apt-get install -y libjpeg8-dev libjasper-dev libpng12-dev
 
 # If you are using Ubuntu 16.04
-sudo apt-get install libtiff5-dev
+sudo apt-get install -y libtiff5-dev
  
-sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev
-sudo apt-get install libxine2-dev libv4l-dev
-sudo apt-get install libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev
-sudo apt-get install qt5-default libgtk2.0-dev libtbb-dev
-sudo apt-get install libatlas-base-dev
-sudo apt-get install libfaac-dev libmp3lame-dev libtheora-dev
-sudo apt-get install libvorbis-dev libxvidcore-dev
-sudo apt-get install libopencore-amrnb-dev libopencore-amrwb-dev
-sudo apt-get install x264 v4l-utils
+sudo apt-get install -y libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev
+sudo apt-get install -y libxine2-dev libv4l-dev
+sudo apt-get install -y libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev
+sudo apt-get install -y qt5-default libgtk2.0-dev libtbb-dev
+sudo apt-get install -y libatlas-base-dev
+sudo apt-get install -y libfaac-dev libmp3lame-dev libtheora-dev
+sudo apt-get install -y libvorbis-dev libxvidcore-dev
+sudo apt-get install -y libopencore-amrnb-dev libopencore-amrwb-dev
+sudo apt-get install -y x264 v4l-utils
  
 # Optional dependencies
-sudo apt-get install libprotobuf-dev protobuf-compiler
-sudo apt-get install libgoogle-glog-dev libgflags-dev
-sudo apt-get install libgphoto2-dev libeigen3-dev libhdf5-dev doxygen
+sudo apt-get install -y libprotobuf-dev protobuf-compiler
+sudo apt-get install -y libgoogle-glog-dev libgflags-dev
+sudo apt-get install -y libgphoto2-dev libeigen3-dev libhdf5-dev doxygen
 
 # Install python dependencies
 sudo apt-get install python-dev python-pip python3-dev python3-pip
@@ -69,4 +69,6 @@ sudo make install
 sudo sh -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf'
 sudo ldconfig
 
-sudo ldconfig
+find /usr/local/lib/ -type f -name "cv2*.so"
+
+
