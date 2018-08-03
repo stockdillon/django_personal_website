@@ -31,11 +31,6 @@ sudo apt-get install python-dev python-pip python3-dev python3-pip
 sudo -H pip2 install -U pip numpy
 sudo -H pip3 install -U pip numpy
 
-# BEFORE DOING THIS, A VIRTUALENV SHOULD BE CREATED AND ACTIVATED
-# now install python libraries within this virtual environment
-source ~/python_virtual_envs/django_py36/bin/activate
-pip install numpy scipy matplotlib scikit-image scikit-learn ipython
-deactivate
 
 cd ~/
 
