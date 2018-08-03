@@ -3,6 +3,7 @@ TO DO:
 Django:
 Set up a file upload form that accepts an image (.jpg, .png, etc.)
 Places the file in an AWS S3 bucket
+	(All original files will be kept in AWS S3  )
 Sends a REQUEST to API Gateway that specifies the filename
 
 Lambda Function:
