@@ -14,3 +14,16 @@ body {
 .bs-sidebar {
 	background-color: #fff;
 }
+
+button {
+	transition: 3s;
+}
+
+p {
+    transition: 2s;
+}
+
+p:hover {
+    width: 150%;
+    height: 150%;
+}

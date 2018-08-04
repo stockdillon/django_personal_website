@@ -1,9 +1,30 @@
-#override, p{
-	color: rgb(42, 220, 243);
+#override {
+    color: rgb(42, 220, 243);
+    transition: 2s;
+}
+
+p {
+    color: rgb(42, 220, 243);
 }
 
 .responsive-img {
+    opacity: 1;
     max-height: 200px;
+    transition: 1.5s;
+}
+
+#profileImg:hover {
+    width: 120%;
+    height: 120%;
+}
+
+
+a {
+    transition: 0.5s
+}
+
+a:hover {
+    font-size: 120%;
 }
 
 .nav.nav-pills.nav-stacked{
@@ -20,4 +41,20 @@
 
 .well.bs-sidebar, .container-fluid.nav {
     background-color: white;
+}
+
+h3 {
+    color: white; 
+    transition: 2s
+}
+
+h3:hover {
+    font-size: 150%;
+}
+
+.container-fluid.nav {
+    position:absolute;
+    bottom:0;
+    padding-bottom: 0;
+    padding-top: 0;
 }

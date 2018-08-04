@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
 	<title>Dillon Stock</title>
 	<meta charset="utf-8" />
@@ -10,14 +11,15 @@
 	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 </head>
 
+
 <body class="body">
 	<div class="container-fluid">
 		<div class="row">
 			  <div class="col-sm-2">
 				  <br>
 				  <center>
-					<img src="{% static 'personal/img/profile.jpg' %}" class="responsive-img" style='max-height:200px;' alt="face">
-				  </center>
+					<img id="profileImg" src="{% static 'personal/img/profile.jpg' %}" class="responsive-img" style='max-height:200px;' alt="face">
+				</center>
 			  </div>
 			  <div class="col-sm-10">
 				  <br>
@@ -39,6 +41,7 @@
 				<li><a href='/personal/'>Home</a></li>
 				<li><a href='/personal/blog/'>Blog</a></li>
 				<li><a href='/personal/contact/'>Contact</a></li>
+				<li><a href='/object_detection/'>Object Detection</a></li>
 			  </ul>
 			</div> <!--well bs-sidebar affix-->
 		  </div> <!--col-sm-2-->
@@ -54,7 +57,9 @@
 	</div>
 	<footer>
 		<div class="container-fluid nav">
-			<p><a href="/personal/contact/" target="blank">Contact</a> | <a href="https://www.linkedin.com/in/dillon-stock-933b44160/" target="blank">LinkedIn</a> | <a href="/personal/downloads/" target="blank">Downloads</a></p>
+				<a href="/personal/contact/" target="blank">Contact</a> | 
+				<a href="https://www.linkedin.com/in/dillon-stock-933b44160/" target="blank">LinkedIn</a> | 
+				<a href="/personal/downloads/" target="blank">Downloads</a>
 		</div>
 	</footer>	
 	

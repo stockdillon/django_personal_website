@@ -5,11 +5,28 @@
 {% load staticfiles %}
 
 <html>
-    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <head>
+        <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/home.css' %}" />    
+    </head>
     
-    <body b>
-        <p>Hello, and welcome to my website!</p>
+    <body>
+        <p id="helloText">Hello, and welcome to my website!</p>
+        <script>
+            var pTagToEdit = document.getElementById('helloText');
+            pTagToEdit.addEventListener('click', transition);
+            var profImg = document.getElementById("profileImg");
+            profImg.addEventListener('click', transition);
+                function transition(){
+                    pTagToEdit.style.transition = "all 2s";
+                    pTagToEdit.style.background = "blue";
+                    pTagToEdit.style.fontSize = "120%";
+                    profImg.style.transition = "all 2s";
+                }
+        </script>
+        <button onclick="transition();">Press</button>
     </body>
+
 </html>
 
 

@@ -2,27 +2,38 @@
 
 
 {% block content %}
-<p>Hello, and welcome to my website!</p>
-<p>My name is Dillon, and I enjoy programming, reading, and staying fit!</p>
+{% load staticfiles %}
 
-<p id="edit">Click me to edit!</p>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />    
+</head>
 
-<script>
-    var pTagToEdit = document.getElementById('edit');
-
-    /*
-    for (var i = 0; i < pTagsToEdit.length; i++) {
-        pTagsToEdit[i].addEventListener('click', updateName);
-    }
-    */    
-
-    pTagToEdit.addEventListener('click', updateName);
-
-    function updateName() {
-        var text = prompt('Enter your text');
-        pTagToEdit.textContent = 'Your text: ' + text;
-    }
-</script>
+<body>
+        <p>Hello, and welcome to my website!</p>
+        <p>My name is Dillon, and I enjoy programming, reading, and staying fit!</p>
+        
+        <p id="edit">Click me to edit!</p>
+        
+        <script>
+            var pTagToEdit = document.getElementById('edit');
+        
+            /*
+            for (var i = 0; i < pTagsToEdit.length; i++) {
+                pTagsToEdit[i].addEventListener('click', updateName);
+            }
+            */    
+        
+            pTagToEdit.addEventListener('click', updateName);
+        
+            function updateName() {
+                var text = prompt('Enter your text');
+                pTagToEdit.textContent = 'Your text: ' + text;
+            }
+        </script>
+</body>
+</html>
 
 {% include "personal/includes/htmlsnippet.html" %}
 {% endblock %}
