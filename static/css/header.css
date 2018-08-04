@@ -1,0 +1,23 @@
+#override, p{
+	color: rgb(42, 220, 243);
+}
+
+.responsive-img {
+    max-height: 200px;
+}
+
+.nav.nav-pills.nav-stacked{
+	color: rgb(42, 220, 243);
+}
+
+.nav-stacked {
+    color: rgb(42, 220, 243);
+}
+
+#sidebar {
+    color: rgb(42, 220, 243);
+}
+
+.well.bs-sidebar, .container-fluid.nav {
+    background-color: white;
+}
