@@ -1,14 +1,26 @@
- {% block content %}
+{% extends "mysite/header.html" %}
+{% load staticfiles %}
+ 
+{% block content %}
 
-<div class="container">
-    <h1>Object Detection</h1>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Submit</button>
-    </form>
-    <h2>{{ text }}</h2>
-    {{ results }}
-</div>
+<head>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />    
+</head>
+
+<body>
+    <div class="container">
+        <h1>Object Detection</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+        <h2>{{ text }}</h2>
+        {{ results }}
+    <button><a href="/object_detection/results/">View Results</a></button>
+
+</body>
+
 
 {% endblock %}

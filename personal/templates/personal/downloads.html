@@ -1,9 +1,9 @@
-{% extends "personal/header.html" %}
+{% extends "mysite/header.html" %}
 
 {% load staticfiles %}
 
 {% block content %}
 <p>Download links will appear here.</p>
-<a href="{% static 'personal/Dillon_Stock_Resume_2018.pdf' %}">Resume</a>
+<a download="Dillon_Stock_Resume_2018.pdf" href="{% static 'personal/Dillon_Stock_Resume_2018.pdf' %}">Resume</a>
 
 {% endblock %}

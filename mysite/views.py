@@ -5,7 +5,12 @@ import os
 from django.views.generic import TemplateView
 
 
-class index(TemplateView):
+class Index(TemplateView):
     template_name = "mysite/home.html"
+    def get(self, request):
+        return render(request, self.template_name)
+
+class PhotoGallery(TemplateView):
+    template_name = "mysite/photo_gallery.html"
     def get(self, request):
         return render(request, self.template_name)
