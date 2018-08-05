@@ -1,0 +1,22 @@
+{% extends "mysite/header.html" %}
+
+
+{% block content %}
+{% load staticfiles %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />  
+</head>
+
+<body>
+    <ul>
+    {% for img_path in img_paths %}
+        <li><img src="{% static img_path %}" class="photo"></li>
+    {% endfor %}
+    </ul>
+
+</body>
+
+
+
+{% endblock %}

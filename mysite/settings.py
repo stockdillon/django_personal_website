@@ -42,12 +42,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'webapp',
     'personal',
     'object_detection',
     #'polls',
     'polls.apps.PollsConfig',
-    'mysite'
+    'mysite',
+    'photo_gallery',
 ]
 
 MIDDLEWARE = [

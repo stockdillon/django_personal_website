@@ -14,7 +14,7 @@ from django.shortcuts import redirect
 
 
 # Create your views here.
-class index(TemplateView):
+class Index(TemplateView):
     template_name = "object_detection/home.html"
     result_template = "object_detection/results.html"
     def get(self, request):
@@ -40,7 +40,7 @@ class index(TemplateView):
         return redirect("results/", permanent=True)
 
 
-class results(TemplateView):
+class Results(TemplateView):
     template_name = "object_detection/results.html"
 
     def get(self, request):

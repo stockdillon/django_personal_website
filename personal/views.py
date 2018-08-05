@@ -24,7 +24,7 @@ def download_resume(request):
     response['Content-Disposition'] = 'attachment; filename=%s' % 'Dillon_Stock_Resume_2018.pdf'
     return response
 
-class index(TemplateView):
+class Index(TemplateView):
     template_name = "personal/home.html"
     def get(self, request):
         return render(request, self.template_name)

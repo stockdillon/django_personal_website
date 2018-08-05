@@ -20,6 +20,8 @@
     background-color:rgb(109, 21, 182);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 0px;
+    z-index: 10;
+    opacity: .7;
 }
 
 /* Links inside the dropdown */
@@ -51,7 +53,8 @@
 }
 
 p {
-    color: rgb(42, 220, 243);
+    color: goldenrod;
+    font-family: Luminari;
 }
 
 header {
@@ -65,14 +68,21 @@ header {
     transition: 1.5s;
     outline-style: ridge;
     outline-width: 3px;
-    outline-color: seagreen;
+    outline-color: transparent;
+    /*outline-color: seagreen;*/
+    border-radius: 200px;
 }
 
 body {
-	background-color: black;
+    background-color: black;
+    /*
 	background-image: url("76YS.gif");
-	background-position: center;
-	transition: 5s ease;
+    background-position: center;
+    */
+    background-image: url('night-mountain.jpg');
+    background-attachment: fixed;
+    transition: 5s ease;
+    background-size: cover;
 }
 
 .well, .container-fluid.nav{
@@ -137,3 +147,13 @@ footer {
     padding-left: 20px;
     outline-style: ridge;
 }
+
+.intro {
+    margin: auto;
+    width: 55%;
+}
+
+.photo {
+    width: 300px
+}
+

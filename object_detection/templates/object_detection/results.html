@@ -13,7 +13,7 @@
         <h1>Object Detection Result</h1>
         <h2> {{ text }}</h2>
         {% for result in results %}
-            <img src="{{ result.image.url }}" alt="">
+            <img src="{{ result.image.url }}" class='photo'>
         {% endfor %}
     </div>
 </body>

@@ -17,13 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from mysite.views import Index, PhotoGallery
+from mysite.views import Index
 
 urlpatterns = [
     path('', Index.as_view()),
-    path('photo_gallery/', PhotoGallery.as_view()),
+    path('photo_gallery/', include('photo_gallery.urls')),
     path('admin/', admin.site.urls),
-    path('webapp/', include('webapp.urls')),
     path('personal/', include('personal.urls')),
     path('object_detection/', include('object_detection.urls')),
     path('polls/', include('polls.urls')),
