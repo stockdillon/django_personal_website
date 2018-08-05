@@ -1,29 +1,2 @@
-#override{
-	color: rgb(42, 220, 243);
-}
 
 
-body {
-    opacity: 0.7;
-	background-color: black;
-	background-image: url("76YS.gif");
-	background-position: center;
-	transition: 5s ease;
-}
-
-.bs-sidebar {
-	background-color: #fff;
-}
-
-button {
-	transition: 3s;
-}
-
-p {
-    transition: 2s;
-}
-
-p:hover {
-    width: 150%;
-    height: 150%;
-}

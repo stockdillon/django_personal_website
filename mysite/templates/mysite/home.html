@@ -4,30 +4,33 @@
 {% block content %}
 {% load staticfiles %}
 
-<html>
-    <head>
-        <link rel="stylesheet" href="{% static 'css/header.css' %}" />
-        <link rel="stylesheet" href="{% static 'css/home.css' %}" />    
-    </head>
-    
-    <body>
-        <p id="helloText">Hello, and welcome to my website!</p>
-        <script>
-            var pTagToEdit = document.getElementById('helloText');
-            pTagToEdit.addEventListener('click', transition);
-            var profImg = document.getElementById("profileImg");
-            profImg.addEventListener('click', transition);
-                function transition(){
-                    pTagToEdit.style.transition = "all 2s";
-                    pTagToEdit.style.background = "blue";
-                    pTagToEdit.style.fontSize = "120%";
-                    profImg.style.transition = "all 2s";
-                }
-        </script>
-        <button onclick="transition();">Press</button>
-    </body>
+<head>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />    
+</head>
 
-</html>
+<body>
+    <center>
+        <img id="profileImg" src="{% static 'personal/img/profile.jpg' %}" class="responsive-img" style='max-height:200px;' alt="face">
+        <h3>Dillon Stock</h3>
+    </center>
+    
+    <p id="helloText">Hello, and welcome to my website!</p>
+    <script>
+        var pTagToEdit = document.getElementById('helloText');
+        pTagToEdit.addEventListener('click', transition);
+        var profImg = document.getElementById("profileImg");
+        profImg.addEventListener('click', transition);
+            function transition(){
+                pTagToEdit.style.transition = "all 2s";
+                pTagToEdit.style.background = "blue";
+                pTagToEdit.style.fontSize = "120%";
+                profImg.style.transition = "all 2s";
+            }
+    </script>
+    <!-- <button onclick="transition();">Press</button> -->
+</body>
+
 
 
 {% endblock %}

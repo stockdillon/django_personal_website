@@ -17,10 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from mysite.views import index
+from mysite.views import Index, PhotoGallery
 
 urlpatterns = [
-    path('', index.as_view()),
+    path('', Index.as_view()),
+    path('photo_gallery/', PhotoGallery.as_view()),
     path('admin/', admin.site.urls),
     path('webapp/', include('webapp.urls')),
     path('personal/', include('personal.urls')),

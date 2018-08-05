@@ -1,0 +1,23 @@
+{% extends "mysite/header.html" %}
+
+
+{% block content %}
+{% load staticfiles %}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/home.css' %}" />    
+    </head>
+    
+    <body>
+        <h3>Photo Gallery</h3>
+        <img id="profileImg" src="{% static 'mysite/photo_gallery/family/CCI10202016_0009-C.jpg' %}" class="responsive-img" style='max-height:200px;' alt="face">
+    </body>
+
+
+
+</html>
+
+
+{% endblock %}
