@@ -7,8 +7,11 @@
 	<meta charset="utf-8" />
 	{% load staticfiles %}
 
+	<link rel="stylesheet" href="{% static '\css\bootstrap\css\bootstrap.css' %}" />
 	<link rel="stylesheet" href="{% static 'css/header.css' %}" />
 	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
+	<link rel="stylesheet" href="{% static 'css/fontawesome/css/all.css' %}" />
 </head>
 
 
@@ -24,20 +27,21 @@
 							<li><a href="/photo_gallery/">Photo Gallery</a></li>
 							</ul>					
 				</div>				
-			</div>
+		</div>
 </header>
 
 
 {% block content %}
 {% endblock %}
 
-<footer>
-		<div class="container-fluid nav">
-				<a href="/personal/contact/" target="blank">Contact</a> | 
-				<a href="https://www.linkedin.com/in/dillon-stock-933b44160/" target="blank">LinkedIn</a> | 
-				<a href="/personal/downloads/">Downloads</a> |
-				<a href="https://github.com/stockdillon/" target="blank">GitHub</a> |
-				<a href="https://www.cse.msu.edu/~cse498/2018-01/projects/amazon/" target="blank">MSU Capstone</a>
+<footer class="page-footer font-small blue pt-4">
+		<div class="container-fluid nav text-center">
+				<a href="/personal/contact/" target="_blank" class="btn btn-lg" id="linkedin"><i class="fas fa-address-book" aria-hidden="true"></i> Contact</a>
+				<a href="https://www.linkedin.com/in/dillon-stock-933b44160/" target="_blank" class="btn btn-lg" id="linkedin"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a> 
+				<a href="/personal/downloads/" class="btn btn-lg outline" target="_blank" id="downloads"><i class="fa fa-download" aria-hidden="true"></i> Downloads</a>				
+				<a href="https://github.com/stockdillon/" class="btn btn-lg outline" target="_blank" id="github"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+				<a href="https://www.cse.msu.edu/~cse498/2018-01/projects/amazon/" class="btn btn-lg" target="_blank" id="msu"><i class="fas fa-university" aria-hidden="true"></i> MSU Capstone</a>				
+				<a href="https://www.instagram.com/maxg303/" class="btn btn-lg" target="_blank" id="instagram"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a>				
 		</div>
 </footer>
 

@@ -5,15 +5,39 @@
 {% load staticfiles %}
 
 <head>
+    <link rel="stylesheet" href="{% static '\css\bootstrap\css\bootstrap.css' %}" />
     <link rel="stylesheet" href="{% static 'css/header.css' %}" />  
+    <link rel="stylesheet" href="{% static 'photo_gallery/css/photos.css' %}" />
 </head>
 
 <body>
-    <ul>
+    <div>
+        <h3>Tips</h3>
+        <p>Hover over a photo to enlarge.</p>
+        <p>Click on a photo to enter gallery mode</p>
+    </div>
+    <!-- <div>{% static ''%}</div>
     {% for img_path in img_paths %}
-        <li><img src="{% static img_path %}" class="photo"></li>
-    {% endfor %}
-    </ul>
+        <div class="photo-in-row">
+            <img src="{% static img_path %}">     
+        </div>
+    {% endfor %} -->
+    <div class="photos">
+        {% for img_row in img_rows %}
+        <div class="row">
+            {% for img_name in img_row %}
+            <div class="photo-in-row col-lg-3 col-md-2">
+                <img src="{% static img_name %}">     
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+
+
+    <script>
+        var photos = document.getElementsByClassName("photo-in-row")
+    </script>
 
 </body>
 

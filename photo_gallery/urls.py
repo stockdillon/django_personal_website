@@ -6,6 +6,7 @@ from photo_gallery.views import Index, PhotosView
 
 urlpatterns = [
     path('', Index.as_view()),
-    path('sports/', views.sports),
-    path('family/', views.family),    
+    # path('sports/', views.sports),
+    # path('family/', views.family),
+    path('<category>/', PhotosView.as_view()),
 ]

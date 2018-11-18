@@ -1,0 +1,45 @@
+body {
+    overflow: scroll;
+}
+
+.photos {
+    padding-top: 50px;
+    max-height: 70%;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.photo-row {
+    /* white-space: nowrap; */
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 0 4px; */
+    justify-content: center;
+    column-count: 3;
+    /* display: inline-block; */
+}
+
+.photo-in-row {
+    display: inline;
+    padding: 10px;
+    margin: auto;
+    transition: all .4s;
+    /* transition: transform .4s;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;       */
+}
+
+img {
+    max-width: 100%;
+    height: auto;  
+    border-radius: 10px;
+}
+
+.photo-in-row:hover {
+    z-index: 999;
+    /* transform: translate(50px); */
+    transform: /*translate(0px, 100px)*/ scale(2);
+}
