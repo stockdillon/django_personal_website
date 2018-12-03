@@ -7,21 +7,23 @@
     <link rel="stylesheet" href="{% static 'css/header.css' %}" />  
 </head>
 
-<body>
-    <div class='intro'>
+<!-- <body> -->
+    <div class='container wrapper'>
         <p>Welcome to the Photo Gallery. Please select a category from the dropdown menu
-            to begin viewing related photos.
-        </p>
-		<div class="dropdown">
-            <button class="dropbtn">Category</button>
-            <div class="dropdown-content">
-                <ul class="nav nav-pills nav-stacked">
-                        <li><a href='/photo_gallery/sports'>Sports</a></li>
-                        <li><a href='/photo_gallery/family'>Family</a></li>
-                </ul>
-            </div>				
-        </div>        
+            to begin viewing photos.
+        </p>     
+        <div class="dropdown">
+                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Category
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href='/photo_gallery/sports'>Sports</a>
+                    <a class="dropdown-item" href='/photo_gallery/family'>Family</a>
+                    <a class="dropdown-item" href='/photo_gallery/other'>Other</a>
+                </div>
+        </div>
     </div>
-</body>
+
+<!-- </body> -->
 
 {% endblock %}

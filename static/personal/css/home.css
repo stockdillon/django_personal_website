@@ -1,0 +1,5 @@
+.jumbotron {
+    background-image: url("img/planet.jpg ");
+    /* width: 100%; */
+    background-size: cover;
+}

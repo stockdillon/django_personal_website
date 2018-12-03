@@ -4,16 +4,39 @@
 {% block content %}
 {% load staticfiles %}
 
-<html>
 <head>
     <link rel="stylesheet" href="{% static 'css/header.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/home.css' %}" />    
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />  
+    <link rel="stylesheet" href="{% static '/personal/css/home.css' %}" />    
 </head>
 
-<body>
+<!-- <body> -->
+        <div class="jumbotron" id="top" style="display: block;">
+                <div class="container text-center" id="top-text">
+                  <h1 class="asap-font" id="my-name">Dillon Stock</h1>
+                  <h2 class="asap-font" id="my-roll">Software Engineer</h2>
+                    <p id="my-intro">Welcome to my digital portfolio. This is where I showcase all the cool stuff
+                       that I have enjoyed working on recently and I share a little bit about my
+                       personal life too.</p>
+      
+                    <div class="btn-group buffer">
+                      <center>
+                            <a href="https://www.linkedin.com/in/dillon-stock-933b44160/" target="_blank" class="btn btn-lg linked-in"><i class="fab fa-linkedin" aria-hidden="true"></i></a> 		
+                            <a href="https://github.com/stockdillon/" class="btn btn-lg outline github" target="_blank"><i class="fab fa-github" aria-hidden="true"></i> </a>
+                            <a href="https://www.instagram.com/dillonstock/" class="btn btn-lg instagram" target="_blank" ><i class="fab fa-instagram" aria-hidden="true"></i> </a>
+                            <a href="https://twitter.com/dillonstock" class="btn btn-lg twitter" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i> </a>
+                            <a href="https://www.facebook.com/dillon.stock.1" class="btn btn-lg facebook" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i> </a>
+                      </center>
+                    </div>
+                  <br><br>
+                </div>
+            </div>
+
+
+
         <img src="{% static 'mysite/hello-there.jpg' %}" class="meme"> 
         <p>
-            My name is Dillon, and I am a Hacker Warlock who
+            My name is Dillon, and I am a software engineer
             graduated from Michigan State University with a B.S. in Computer Science in 2018.
             I enjoy reading high fantasy novels like The Lord of the Rings, and staying
             active by lifting weights and playing sports including soccer and volleyball.
@@ -40,8 +63,7 @@
                 pTagToEdit.textContent = 'Your text: ' + text;
             }
         </script>
-</body>
-</html>
+<!-- </body> -->
 
-{% include "personal/includes/htmlsnippet.html" %}
-{% endblock %}
+<!-- {% include "personal/includes/htmlsnippet.html" %}
+{% endblock %} -->

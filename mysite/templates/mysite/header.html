@@ -8,6 +8,9 @@
 	{% load staticfiles %}
 
 	<link rel="stylesheet" href="{% static '\css\bootstrap\css\bootstrap.css' %}" />
+	<script type="text/javascript" src="{% static '\scripts\jquery-3.3.1.js' %}"></script>
+	<script type="text/javascript" src="https://unpkg.com/popper.js@1.14.5/dist/umd/popper.js"></script>
+	<script type="text/javascript" src="{% static '\css\bootstrap\js\bootstrap.js' %}" ></script>
 	<link rel="stylesheet" href="{% static 'css/header.css' %}" />
 	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
@@ -15,34 +18,77 @@
 </head>
 
 
-<header>
+<!-- <header>
 		<div class="dropdown">
 				<button class="dropbtn">Site Content</button>
+				
 				<div class="dropdown-content">
 							<ul class="nav nav-pills nav-stacked">
-							<li><a href='/'>Home</a></li>
-							<li><a href='/personal/'>Personal</a></li>
-							<li><a href='/personal/contact/'>Contact</a></li>
-							<li><a href='/object_detection/'>Object Detection</a></li>
-							<li><a href="/photo_gallery/">Photo Gallery</a></li>
+							<a href='/'>Home</a>
+							<a href='/personal/'>Personal</a>
+							<a href='/personal/contact/'>Contact</a>
+							<a href='/object_detection/'>Object Detection</a>
+							<a href="/photo_gallery/">Photo Gallery</a>
 							</ul>					
 				</div>				
 		</div>
-</header>
+</header> -->
+
+<body>
+	<header id="myHeader" class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar header-theme stickyheader">
+		<div class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Site Contents
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href='/'>Home</a>
+				<a class="dropdown-item" href='/personal/'>Personal</a>
+				<a class="dropdown-item" href='/personal/contact/'>Contact</a>
+				<a class="dropdown-item" href='/object_detection/'>Object Detection</a>
+				<a class="dropdown-item" href="/photo_gallery/">Photo Gallery</a>				  
+			</div>
+		</div>
+		
+		<a href="https://www.linkedin.com/in/dillon-stock-933b44160/" target="_blank" class="btn btn-lg linked-in"><i class="fab fa-linkedin" aria-hidden="true"></i></a> 		
+		<a href="https://github.com/stockdillon/" class="btn btn-lg outline github" target="_blank"><i class="fab fa-github" aria-hidden="true"></i> </a>
+		<a href="https://www.instagram.com/dillonstock/" class="btn btn-lg instagram" target="_blank" ><i class="fab fa-instagram" aria-hidden="true"></i> </a>
+		<a href="https://twitter.com/dillonstock" class="btn btn-lg twitter" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i> </a>
+		<a href="https://www.facebook.com/dillon.stock.1" class="btn btn-lg facebook" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i> </a>
+	</header>
+	
+	<script>
+		// When the user scrolls the page, execute myFunction 
+		window.onscroll = function() {myFunction()};
+		
+		// Get the header
+		var header = document.getElementById("myHeader");
+		
+		// Get the offset position of the navbar
+		var sticky = header.offsetTop;
+		
+		// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+		function myFunction() {
+			if (window.pageYOffset > sticky) {
+				header.classList.add("sticky");
+			} else {
+				header.classList.remove("sticky");
+			}
+		}
+		</script>
 
 
+<div class="container wrapper">
 {% block content %}
 {% endblock %}
+</div>
 
-<footer class="page-footer font-small blue pt-4">
-		<div class="container-fluid nav text-center">
-				<a href="/personal/contact/" target="_blank" class="btn btn-lg" id="linkedin"><i class="fas fa-address-book" aria-hidden="true"></i> Contact</a>
-				<a href="https://www.linkedin.com/in/dillon-stock-933b44160/" target="_blank" class="btn btn-lg" id="linkedin"><i class="fab fa-linkedin" aria-hidden="true"></i>LinkedIn</a> 
-				<a href="/personal/downloads/" class="btn btn-lg outline" target="_blank" id="downloads"><i class="fa fa-download" aria-hidden="true"></i> Downloads</a>				
-				<a href="https://github.com/stockdillon/" class="btn btn-lg outline" target="_blank" id="github"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
-				<a href="https://www.cse.msu.edu/~cse498/2018-01/projects/amazon/" class="btn btn-lg" target="_blank" id="msu"><i class="fas fa-university" aria-hidden="true"></i> MSU Capstone</a>				
-				<a href="https://www.instagram.com/maxg303/" class="btn btn-lg" target="_blank" id="instagram"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a>				
-		</div>
+<footer class="page-footer font-small footer-theme stickyfooter text-center">
+	<!-- <div class="container-fluid nav text-center bottom"> -->
+		<a class="btn btn-info btn-sm " href="/personal/contact/" target="_blank" id="linkedin"><i class="fas fa-address-book" aria-hidden="true"></i> Contact</a>
+		<a class="btn btn-info btn-sm " href="/personal/downloads/"  target="_blank" ><i class="fa fa-download" aria-hidden="true"></i> Downloads</a>				
+		<a class="btn btn-info btn-sm " href="https://www.cse.msu.edu/~cse498/2018-01/projects/amazon/" target="_blank" ><i class="fas fa-university" aria-hidden="true"></i> MSU Capstone</a>				
+	<!-- </div> -->
 </footer>
 
+</body>
 </html>

@@ -9,27 +9,30 @@
     <link rel="stylesheet" href="{% static 'css/home.css' %}" />    
 </head>
 
-<body>
+<!-- <body> -->
+<div class="wrapper">
     <center>
         <img id="profileImg" src="{% static 'personal/img/profile.jpg' %}" class="responsive-img" style='max-height:200px;' alt="face">
         <h3>Dillon Stock</h3>
     </center>
     
-    <p id="helloText">Hello, and welcome to my website!</p>
+    <p id="helloText">Welcome to my website!</p>
+</div>
+
     <script>
         var pTag = document.getElementById('helloText');
         pTag.addEventListener('click', transition);
         var profImg = document.getElementById("profileImg");
         profImg.addEventListener('click', transition);
-            function transition(){
-                pTag.style.transition = "all 2s";
-                pTag.style.background = "blue";
-                pTag.style.fontSize = "120%";
-                profImg.style.transition = "all 2s";
+        function transition(){
+            pTag.style.transition = "all 2s";
+            pTag.style.background = "blue";
+            pTag.style.fontSize = "120%";
+            profImg.style.transition = "all 2s";
             }
     </script>
     <!-- <button onclick="transition();">Press</button> -->
-</body>
+<!-- </body> -->
 
 
 

@@ -10,36 +10,55 @@
     <link rel="stylesheet" href="{% static 'photo_gallery/css/photos.css' %}" />
 </head>
 
-<body>
-    <div>
-        <h3>Tips</h3>
-        <p>Hover over a photo to enlarge.</p>
-        <p>Click on a photo to enter gallery mode</p>
-    </div>
-    <!-- <div>{% static ''%}</div>
+<!-- <body> -->
+
+<div>
+    <h3>Tips</h3>
+    <p>Hover over a photo to enlarge.</p>
+    <p>Click on a photo to enter gallery mode</p>
+</div>
+<!-- <div>{% static ''%}</div>
     {% for img_path in img_paths %}
-        <div class="photo-in-row">
-            <img src="{% static img_path %}">     
-        </div>
+    <div class="photo-in-row">
+        <img src="{% static img_path %}">     
+    </div>
     {% endfor %} -->
-    <div class="photos">
-        {% for img_row in img_rows %}
-        <div class="row">
-            {% for img_name in img_row %}
-            <div class="photo-in-row col-lg-3 col-md-2">
-                <img src="{% static img_name %}">     
-            </div>
-            {% endfor %}
+<div class="photos">
+    {% for img_row in img_rows %}
+    <div class="row">
+        {% for img_name in img_row %}
+        <div class="photo-in-row col-lg-3 col-md-2">
+            <img src="{% static img_name %}">     
         </div>
         {% endfor %}
     </div>
-
-
+    {% endfor %}
+</div>
+    
+    
     <script>
-        var photos = document.getElementsByClassName("photo-in-row")
+        // var photos = document.getElementsByClassName("photo-in-row")
+        var photos = $(".photo-in-row");
+        console.log(photos);
+        // photos.each(function(index, element){
+        //     element.style.opacity = 0;
+        // })
+        $(".photo-in-row").each(function(index){$(this).hide().delay(index*300).fadeIn(300)});
+
+        // for(var i=0; i<10; i++){
+        //     photos.each(function(index, element){
+        //         element.style.opacity += 0.1;
+        //         // sleep(1000);
+        //     })
+        // }
+
+        // photos.each(function(index, element){
+        //     // element.fadeIn(5000);
+        //     console.log(element);
+        // })
     </script>
 
-</body>
+<!-- </body> -->
 
 
 

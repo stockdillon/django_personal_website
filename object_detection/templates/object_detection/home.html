@@ -1,26 +1,59 @@
 {% extends "mysite/header.html" %}
 {% load staticfiles %}
- 
+{% load crispy_forms_tags %}
+
 {% block content %}
 
 <head>
     <link rel="stylesheet" href="{% static 'css/header.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/home.css' %}" />    
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'object_detection/css/home.css' %}" />
 </head>
 
-<body>
-    <div class="container">
+<!-- <body> -->
+    <!-- <div class="container wrapper"> -->
         <h1>Object Detection</h1>
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Submit</button>
+            <!-- {{ form.as_p }} -->
+            {{ form|crispy }}
+            <label class="label btn btn-primary" for="id_image"><i class="fa fa-upload" aria-hidden="true"></i>Choose a file...</label>
+            <button id= "submit" type="submit" class="btn btn-success">Submit</button>
         </form>
         <h2>{{ text }}</h2>
         {{ results }}
-    <button><a href="/object_detection/results/">View Results</a></button>
+    <button class="btn btn-primary"><a href="/object_detection/results/">View Results</a></button>
 
-</body>
+    <script>
+        sub = document.getElementById('id_image')
+        sub.style = "width: 0.1px;height: 0.1px;opacity: 0;overflow: hidden;position: absolute;z-index: -1;"
+    </script>
+
+<script>
+    console.log('hi mom1!');
+        var inputs = document.querySelectorAll( '.clearablefileinput' );
+        Array.prototype.forEach.call( inputs, function( input )
+        {
+            console.log('hi mom!');
+            var label	 = input.nextElementSibling,
+                labelVal = label.innerHTML;
+
+            input.addEventListener( 'change', function( e )
+            {
+                console.log('hi mom2!');
+                var fileName = '';
+                if( fileName ){
+                    console.log("here we go!");
+                    label.querySelector( '#id_image' ).innerHTML = fileName;
+                }
+                else
+                    label.innerHTML = labelVal;
+            });
+        });    
+</script>
+
+    <!-- </div> -->
+<!-- </body> -->
 
 
 {% endblock %}

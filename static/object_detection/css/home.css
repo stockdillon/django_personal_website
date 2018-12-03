@@ -1,0 +1,24 @@
+input[type=text] {
+    border-radius: 4px;
+}
+
+input[type=file] {
+    border-radius: 4px;
+}
+
+.btn a {
+    color: white;
+}
+
+label {
+    /* border-radius: 4px; */
+    /* background-color: #007bff; */
+    cursor: pointer; /* "hand" cursor */
+    /* color: white; */
+    /* display: block; */
+    float: left;
+}
+
+label:after {
+    content: "";
+}

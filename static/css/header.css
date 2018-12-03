@@ -1,7 +1,17 @@
-header {
+/* header {
     top: 0;
     left: 0;
     position: fixed;
+} */
+
+body {
+    /* background-color: #212121; */
+    height: 100vh;
+    padding-top:90px;
+}
+
+.dropdown-menu, .dropdown-item {
+    background-color:#3dbcd9;
 }
 
 /* Dropdown Button */
@@ -19,33 +29,6 @@ header {
     padding: 0px;
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color:rgb(90, 116, 45);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 0px;
-    z-index: 10;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: rgb(233, 204, 42);
-    padding: 10px 12px;
-    text-decoration: none;
-    display: block;
-    white-space: nowrap;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: rgb(90, 116, 45);}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: rgb(90, 116, 45);}
 
 
 /*
@@ -65,7 +48,7 @@ header {
 }
 
 p {
-    color: rgb(233, 204, 42);
+    color: rgb(143, 63, 209);
     /* background-color: rgb(90, 116, 45); */
 }
 
@@ -112,7 +95,7 @@ a {
 
 
 #sidebar {
-    color: rgb(109, 21, 182);
+    color: rgb(132, 38, 209);
 }
 
 .well.bs-sidebar {
@@ -120,11 +103,11 @@ a {
     float: left;
 }
 
-.well.bs-sidebar, .container-fluid.nav {
+/* .well.bs-sidebar, .container-fluid.nav {
     background-color: white;
-}
+} */
 
-h3 {
+h1,h2,h3 {
     color: white; 
     transition: 2s
 }
@@ -141,24 +124,21 @@ h3 {
     white-space: nowrap;
 } */
 
-.container-fluid {
-    width: 60%;
+/* .container-fluid {
     text-align: center;
 }
 
 .container-fluid a {
     text-align: center;
     padding: 10px;
-}
+} */
 
-footer {
-    width: 100%;
+/* footer {
     margin: auto;
-    /* font-size: 100%; */
     text-align: center;
     position: relative;
     bottom:0;    
-}
+} */
 
 
 .nav.nav-pills.nav-stacked {
@@ -192,19 +172,89 @@ footer {
 } */
 
 
-#github {
+.linked-in {
+    color: #0073b1;
+}
+
+.github {
     color: #24292e;
 }
 
-#instagram {
+.instagram {
     color: #8a3ab9;
 }
 
-#msu {
+.msu {
     color: #18453B;
 }
 
-.msu_icon {
-    height: auto;
-    width: 6%;
+.twitter {
+    color: #1da1f2;
+}
+
+.header-theme, .footer-theme {
+    background: #563d7c;
+}
+
+footer div a {
+    /* background: #563d7c; */
+}
+
+footer div {
+    /* background: #563d7c; */
+}
+
+footer div a {
+    /* background: inherit; */
+}
+
+
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    margin: 0 auto -175px; /* the bottom margin is the negative value of the footer's height */
+}
+.wrapper:after {
+    content: "";
+    display: block;
+}
+.page-footer, .wrapper:after {
+    height: 60px; 
+}
+
+
+.stickyheader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.stickyfooter {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.sticky + .container {
+    padding-top: 102px;
+}
+
+header {
+    z-index: 1000;
+}
+
+.fa {
+    padding: 5px;
+}
+
+.text-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
 }

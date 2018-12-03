@@ -35,12 +35,8 @@ def family(request):
     return render_photos(request, category)  
 
 class PhotosView(TemplateView):
-    category = ""
+    # category = ""
     template_name = "photo_gallery/photos.html"
     def get(self, request, category):
         return render_photos(request, category)
         #return render(request, self.template_name)
-
-class SportsPhotosView(PhotosView):
-    def get(self, request):
-        return render(request, self.template_name)
