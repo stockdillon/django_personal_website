@@ -35,26 +35,33 @@
 </header> -->
 
 <body>
-	<header id="myHeader" class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar header-theme stickyheader">
-		<div class="dropdown">
-			<button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				Site Contents
-			</button>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a class="dropdown-item" href='/'>Home</a>
-				<a class="dropdown-item" href='/personal/'>Personal</a>
-				<a class="dropdown-item" href='/personal/contact/'>Contact</a>
-				<a class="dropdown-item" href='/object_detection/'>Object Detection</a>
-				<a class="dropdown-item" href="/photo_gallery/">Photo Gallery</a>				  
+	<header id="myHeader container" class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar header-theme stickyheader">
+		<div class="container">
+
+			<div class="dropdown">
+				<button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Site Contents
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href='/'>Home</a>
+					<a class="dropdown-item" href='/personal/'>Personal</a>
+					<a class="dropdown-item" href='/personal/contact/'>Contact</a>
+					<a class="dropdown-item" href='/object_detection/'>Object Detection</a>
+					<a class="dropdown-item" href="/photo_gallery/">Photo Gallery</a>				  
+				</div>
+			</div>
+			
+			<div class="container">
+				<a href="https://www.linkedin.com/in/dillon-stock-933b44160/" target="_blank" class="btn btn-lg linked-in"><i class="fab fa-linkedin" aria-hidden="true"></i></a> 		
+				<a href="https://github.com/stockdillon/" class="btn btn-lg outline github" target="_blank"><i class="fab fa-github" aria-hidden="true"></i> </a>
+				<a href="https://www.instagram.com/dillonstock/" class="btn btn-lg instagram" target="_blank" ><i class="fab fa-instagram" aria-hidden="true"></i> </a>
+				<a href="https://twitter.com/dillonstock" class="btn btn-lg twitter" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i> </a>
+				<a href="https://www.facebook.com/dillon.stock.1" class="btn btn-lg facebook" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i> </a>
 			</div>
 		</div>
-		
-		<a href="https://www.linkedin.com/in/dillon-stock-933b44160/" target="_blank" class="btn btn-lg linked-in"><i class="fab fa-linkedin" aria-hidden="true"></i></a> 		
-		<a href="https://github.com/stockdillon/" class="btn btn-lg outline github" target="_blank"><i class="fab fa-github" aria-hidden="true"></i> </a>
-		<a href="https://www.instagram.com/dillonstock/" class="btn btn-lg instagram" target="_blank" ><i class="fab fa-instagram" aria-hidden="true"></i> </a>
-		<a href="https://twitter.com/dillonstock" class="btn btn-lg twitter" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i> </a>
-		<a href="https://www.facebook.com/dillon.stock.1" class="btn btn-lg facebook" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i> </a>
 	</header>
+
+	<div class="spacer"></div>
 	
 	<script>
 		// When the user scrolls the page, execute myFunction 
@@ -67,14 +74,14 @@
 		var sticky = header.offsetTop;
 		
 		// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-		function myFunction() {
+		function  () {
 			if (window.pageYOffset > sticky) {
 				header.classList.add("sticky");
 			} else {
 				header.classList.remove("sticky");
 			}
 		}
-		</script>
+	</script>
 
 
 <div class="container wrapper">
@@ -85,7 +92,7 @@
 <footer class="page-footer font-small footer-theme stickyfooter text-center">
 	<!-- <div class="container-fluid nav text-center bottom"> -->
 		<a class="btn btn-info btn-sm " href="/personal/contact/" target="_blank" id="linkedin"><i class="fas fa-address-book" aria-hidden="true"></i> Contact</a>
-		<a class="btn btn-info btn-sm " href="/personal/downloads/"  target="_blank" ><i class="fa fa-download" aria-hidden="true"></i> Downloads</a>				
+		<a class="btn btn-info btn-sm " href="/personal/downloads/"  target="_blank" id="downloads"><i class="fa fa-download" aria-hidden="true"></i> Downloads</a>				
 		<a class="btn btn-info btn-sm " href="https://www.cse.msu.edu/~cse498/2018-01/projects/amazon/" target="_blank" ><i class="fas fa-university" aria-hidden="true"></i> MSU Capstone</a>				
 	<!-- </div> -->
 </footer>
